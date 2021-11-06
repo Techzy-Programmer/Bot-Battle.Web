@@ -1,0 +1,134 @@
+*
+{
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body
+{
+	user-select: none;
+	padding: 0;
+	margin: 0;
+}
+
+#main
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #6824BD;
+	background: -webkit-radial-gradient(center, #6824BD, #160248);
+	background: -moz-radial-gradient(center, #6824BD, #160248);
+	background: radial-gradient(ellipse at center, #6824BD, #160248);
+	position: relative;
+	height: 100vh;
+}
+
+.info-holder
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 560px;
+	width: 100%;
+	padding: 10px;
+	line-height: 1.1;
+}
+
+.info-holder .emoji-holder
+{
+	position: relative;
+	padding: 5px 10px;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	width: 140px;
+	height: 140px;
+	background-image: var(--img-url);
+	background-size: cover;
+}
+
+.info-holder .emoji-holder:before
+{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+	background: #698AC6;
+	background: -webkit-radial-gradient(center, #698AC6, #44094D);
+	background: -moz-radial-gradient(center, #698AC6, #44094D);
+	background: radial-gradient(ellipse at center, #698AC6, #44094D);
+	filter: blur(10px);
+	border-radius: 50%;
+	background-color: #f2f5f8;
+	z-index: -1;
+}
+
+.info-holder h1
+{
+	font-size: 65px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	color: #ccfff8;
+}
+
+.info-holder h2
+{
+	font-size: 17.2px;
+	font-weight: 200;
+	margin: 0;
+	word-spacing: 4px;
+	letter-spacing: 2px;
+	transform: scaleY(1.25);
+	text-transform: uppercase;
+	color: #d0ffb8;
+}
+
+.info-holder p
+{
+	max-width: 450px;
+	text-align: center;
+	font-size: 16.5px;
+	color: #f4fcff99;
+	font-weight: 400;
+}
+
+.info-holder b
+{
+	color: #ffeb00;
+	padding: 2px;
+	letter-spacing: 1px;
+	font-weight: 900;
+}
+
+.info-holder a
+{
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 18px;
+	border-radius: 40px;
+	padding: 5px 8px;
+	letter-spacing: 2px;
+	border: 2px dotted #ffe97573;
+	text-decoration: none;
+	color: #ff9393;
+}
+
+@media only screen and (max-width: 767px)
+{
+	.info-holder .emoji-holder
+	{
+		width: 110px;
+		height: 110px;
+	}
+	.info-holder
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 110px;
+	}
+}
